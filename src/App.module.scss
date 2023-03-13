@@ -77,7 +77,7 @@ $power-up-button: #f6456c;
   width: 100%;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 2em;
   background-color: $power-meter-level;
 
   margin: 0;
@@ -87,7 +87,7 @@ $power-up-button: #f6456c;
     flex-grow: 1;
     border: solid 3px darken($power-meter-base, 20);
     border-right: none;
-    padding: .8em 1em;
+    padding: .5em .8em;
   }
 
   button {

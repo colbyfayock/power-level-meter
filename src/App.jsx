@@ -8,7 +8,7 @@ import reader4 from './assets/reader-4.png';
 import styles from './App.module.scss';
 
 const MAX_POWER = 12000;
-const INCREMENT_AMOUNT = 1500;
+const INCREMENT_AMOUNT = 3000;
 const POWER_UP_AMOUNT = 200;
 const INCREMENTS_COUNT = MAX_POWER / INCREMENT_AMOUNT;
 const METER_INCREMENT_PERCENTAGE = 100 / INCREMENTS_COUNT
