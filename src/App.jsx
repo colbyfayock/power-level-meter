@@ -18,6 +18,7 @@ let timeout;
 function App() {
 
   const [powerLevel, setPowerLevel] = createSignal(0);
+  const powerLevelPercentage = () => powerLevel() / MAX_POWER * 100;
 
   function handleOnPowerUp() {
     if ( powerLevel() >= MAX_POWER ) return;
@@ -41,14 +42,14 @@ function App() {
         <div class={styles.power}>
           <span class={styles.powerMeter}>
             <span class={styles.powerMeterLevel} style={{
-              height: `${powerLevel() / MAX_POWER * 100}%`
+              height: `${powerLevelPercentage()}%`
             }} />
 
             <Index each={[...Array(INCREMENTS_COUNT + 1)]}>
               {(_, index) => (
                 <span
                   class={styles.powerMeterIncrement}
-                  data-power-active={METER_INCREMENT_PERCENTAGE * index <= powerLevel() / MAX_POWER * 100}
+                  data-power-active={METER_INCREMENT_PERCENTAGE * index <= powerLevelPercentage()}
                   style={{
                     bottom: `${METER_INCREMENT_PERCENTAGE * index}%`
                   }}
