@@ -1,4 +1,4 @@
-import { createSignal, Index, Switch, Match } from "solid-js";
+import { createSignal, Index } from "solid-js";
 
 import reader1 from './assets/reader-1.png';
 import reader2 from './assets/reader-2.png';
